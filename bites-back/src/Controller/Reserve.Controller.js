@@ -15,7 +15,6 @@ async function reserveTable(req, res) {
     req.status(500).json({ message: error });
   }
 }
-
 async function changeReserve(req, res) {
   try {
     let nChange = await Reserve.updateOne(
@@ -34,7 +33,6 @@ async function changeReserve(req, res) {
     res.status(500).json({ message: error });
   }
 }
-
 async function deleteReserve(req, res) {
   let id = req.params.id;
   try {
@@ -44,7 +42,6 @@ async function deleteReserve(req, res) {
     res.status(500).json({ message: error });
   }
 }
-
 module.exports = {
   reserveTable,
   changeReserve,

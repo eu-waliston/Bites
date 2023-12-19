@@ -9,7 +9,6 @@ async function getAdmin(req, res) {
     res.status(500).json({ message: error });
   }
 }
-
 async function createAdmin(req, res) {
   const newAdmin = new Admin({
     admin_name: req.body.admin_name,
@@ -24,7 +23,6 @@ async function createAdmin(req, res) {
     res.status(500).json({ message: error });
   }
 }
-
 module.exports = {
     createAdmin,
     getAdmin

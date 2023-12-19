@@ -8,7 +8,6 @@ async function getCartItens(req, res) {
     res.status(500).json({ message: error });
   }
 }
-
 async function addToCart(req, res) {
   const newIten = new Iten({
     cart_item_name: req.body.cart_item_name,
@@ -24,7 +23,6 @@ async function addToCart(req, res) {
     res.status(500).json({ message: error });
   }
 }
-
 async function updateCartIten(req, res) {
   try {
     let cartItenUpdate = await Cart.updateOne(
@@ -40,7 +38,6 @@ async function updateCartIten(req, res) {
     res.status(500).json({ message: error });
   }
 }
-
 async function deleteCartIten(req, res) {
   let id = req.params.id;
   try {
@@ -50,7 +47,6 @@ async function deleteCartIten(req, res) {
     res.status(500).json({ message: error });
   }
 }
-
 module.exports = {
   getCartItens,
   addToCart,
