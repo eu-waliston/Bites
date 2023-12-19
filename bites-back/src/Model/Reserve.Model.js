@@ -1,9 +1,10 @@
 const { default: mongoose, mongo } = require("mongoose");
 
 const ReserveSchema = mongoose.Schema({
-  reserve_table: { Number },
+  table_number: { Number },
   reserve_date: { Date },
   reserve_hour: { String },
+  reserve_name: { String },
 });
 
 module.exports = mongoose.model("Reserve", ReserveSchema);
