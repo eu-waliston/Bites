@@ -25,6 +25,7 @@ async function changeReserve(req, res) {
           reserve_date: req.body.reserve_date,
           reserve_hour: req.body.reserve_hour,
           reserve_name: req.body.reserve_name,
+          table_status: req.body.table_status,
         },
       }
     );
