@@ -17,6 +17,15 @@ App.use(cors());
 App.use(helmet());
 
 //Routes
+const AdminRouter = require("./View/Admin.Vew");
+const CartRouter = require("./View/Cart.View");
+const FoodRouter = require("./View/Cart.View");
+const ReserveRouter = require("./View/Reserve.View");
+
+App.use("/", AdminRouter);
+App.use("/", CartRouter);
+App.use("/", FoodRouter);
+App.use("/", ReserveRouter);
 
 //Server Start
 App.listen(process.envPORT, () => {
